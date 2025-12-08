@@ -1,5 +1,12 @@
 [
   {
+    "id": "plane-frame",
+    "type": "projects",
+    "sublabel": "",
+    "label": "Plane Frame",
+    "imageCount": 6
+  },
+  {
     "id": "whodini",
     "type": "projects",
     "sublabel": "",

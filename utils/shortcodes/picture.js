@@ -53,8 +53,8 @@ function loadCache() {
 
 // Save image as the given size and format
 function saveImageFormat(image, width, format, quality) {
-  // Resize image and format with given quality
-  const formatted = image.clone().resize(width)[format]({
+  // Apply EXIF orientation, resize image and format with given quality
+  const formatted = image.clone().rotate().resize(width)[format]({
     quality
   })
 
@@ -65,8 +65,8 @@ function saveImageFormat(image, width, format, quality) {
 
 // Get the average color from an image
 function getAverageColor(image) {
-  // Resize to one pixel and get raw buffer
-  const buffer = deasyncSharp(image.clone().resize(1).raw(), 'toBuffer')
+  // Apply EXIF orientation, resize to one pixel and get raw buffer
+  const buffer = deasyncSharp(image.clone().rotate().resize(1).raw(), 'toBuffer')
   // Convert values to percentages
   const values = [...buffer].map((value) => `${(value * 100 / 255).toFixed(0)}%`)
   // Output rgb or rgba color
