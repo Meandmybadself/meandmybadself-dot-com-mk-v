@@ -1,0 +1,21 @@
+---
+label: Plane Frame
+sublabel:
+---
+
+{% extends '../_layouts/details.njk' %}
+
+{% block description %}
+  <p>Made for friends whose house lies in the approach path to MSP—so they always know exactly who's flying overhead.</p>
+  <p>This device uses an ADS-B radio connected to a Raspberry Pi Zero to identify the closest in-range commercial aircraft. It queries <a href="https://adsb.lol">adsb.lol</a> to retrieve airline data and renders the information onto a Pimoroni Inky Impression 7.3" color e-ink display.</p>
+  <p>Still a work in progress as we dial in the update time to under 30 seconds.</p>
+  <p>The frame was 3D-printed custom for this application.</p>
+{% endblock %}
+
+{% stylesheet 'scss' %}
+  $accent: #583121;
+  @import 'global';
+  @import 'mixins';
+  @import 'details';
+
+{% endstylesheet %}
