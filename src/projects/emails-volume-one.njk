@@ -6,8 +6,8 @@ sublabel:
 {% extends '../_layouts/details.njk' %}
 
 {% block description %}
-  <p>My wife & I met under unusual circumstances. You can hear the five minute version, <a href="https://www.youtube.com/watch?v=Kd-TFFyzqfI" target="_blank">The Tale of Two Domain-crossed Lovers</a> here.</p>
-  <p>October 23rd marks the 20th anniversary of our first email correspondence, so I:</p>
+  <p>My wife & I met under unusual circumstances when I accidentally sent an email to the wrong domain. You can hear the five minute version, <a href="https://www.youtube.com/watch?v=Kd-TFFyzqfI" target="_blank">The Tale of Two Domain-crossed Lovers</a> here.</p>
+  <p>October 23rd, 2025 marks the 20th anniversary of our first email correspondence, so I:</p>
   <ul>
     <li>Downloaded all email messages between the two of us into SQLite</li>
     <li>Used Python / Pillow to generate a PDF of the first year of emails (using Google Sans as the font)</li>
@@ -20,5 +20,12 @@ sublabel:
   @import 'global';
   @import 'mixins';
   @import 'details';
+
+  .grid.grid--details {
+    .box.box--masthead {
+      min-height: 575px;
+    }
+  }
+
 
 {% endstylesheet %}
