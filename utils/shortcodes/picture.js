@@ -93,8 +93,8 @@ module.exports = function(src, alt, sizes = '90vw, (min-width: 1280px) 1152px', 
   // Hash the original image
   const imageHash = hashContent(deasyncSharp(original, 'toBuffer'))
 
-  // Load cache of resized images if in development mode.
-  const cache = process.env.ELEVENTY_ENV !== 'production' ? loadCache() : {}
+  // Load cache of resized images (works in both development and production)
+  const cache = loadCache()
   const cachePicture = cache.hasOwnProperty(imageHash) && cache[imageHash]
 
   // Get metadata from original image
@@ -140,11 +140,14 @@ module.exports = function(src, alt, sizes = '90vw, (min-width: 1280px) 1152px', 
     </picture>
   `
 
-  // Add images to cache
-  cache[imageHash] = images
-
-  // Save cache file
-  jsonfile.writeFileSync(CACHE_FILE, cache, { spaces: 2 })
+  // Add images to cache only if they were newly generated
+  if (!cachePicture) {
+    cache[imageHash] = images
+    // Save cache file (only write if cache was updated)
+    // Use minimal spacing in production for faster writes
+    const spaces = process.env.ELEVENTY_ENV === 'production' ? 0 : 2
+    jsonfile.writeFileSync(CACHE_FILE, cache, { spaces })
+  }
 
   return picture
 }
