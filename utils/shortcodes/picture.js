@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const sharp = require('sharp')
 const deasync = require('deasync')
 const jsonfile = require('jsonfile')
@@ -22,15 +23,26 @@ const CACHE_FILE = path.join(process.cwd(), '.twelvety.cache')
 // This is required for synchronous markdown-it plugin
 function deasyncSharp(image, sharpFunction) {
   let result
+  let error = null
 
   // Call function with callback
-  image[sharpFunction].bind(image)((error, data) => {
-    if (error) throw error
-    result = data
+  image[sharpFunction].bind(image)((err, data) => {
+    if (err) {
+      error = err
+      result = null
+    } else {
+      result = data
+    }
   })
 
-  // Loop while the result is undefined
-  deasync.loopWhile(() => result === undefined)
+  // Loop while the result is undefined and no error occurred
+  deasync.loopWhile(() => result === undefined && error === null)
+  
+  // Throw error if one occurred
+  if (error) {
+    throw error
+  }
+  
   return result
 }
 
@@ -86,6 +98,11 @@ module.exports = function(src, alt, sizes = '90vw, (min-width: 1280px) 1152px', 
   // `
 
   const imagePath = getImagePath(src)
+
+  // Check if file exists before processing
+  if (!fs.existsSync(imagePath)) {
+    throw new Error(`Image file not found: ${imagePath} (resolved from src: ${src})`)
+  }
 
   // Original image in sharp
   const original = sharp(imagePath)
