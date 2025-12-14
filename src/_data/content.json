@@ -1,5 +1,12 @@
 [
   {
+    "id": "first-year-of-emails",
+    "type": "projects",
+    "sublabel": "",
+    "label": "First Year of Emails Book",
+    "imageCount": 1
+  },
+  {
     "id": "plane-frame",
     "type": "projects",
     "sublabel": "",
