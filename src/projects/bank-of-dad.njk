@@ -1,0 +1,24 @@
+---
+label: Bank of Dad
+sublabel:
+---
+
+{% extends '../_layouts/details.njk' %}
+
+{% block description %}
+  <p>We have an issue in our household where we'll be at a store &amp; one of the kids will tell me "I have $3 at home, can I buy this?"</p>
+  <p>And reader, it turns out they did not have $3 at home.</p>
+  <p>So, now they can deposit money at home with me, and I make note of it in the site we vibe coded last night, Bank of Dad.</p>
+  <p>
+    <a href="https://github.com/meandmybadself/bank-of-dad">Source</a> | 
+    <a href="https://meandmybadself.github.io/bank-of-dad/">Try it</a> (u/p: dad/bank-of-dad)
+  </p>
+{% endblock %}
+
+{% stylesheet 'scss' %}
+  $accent: #583121;
+  @import 'global';
+  @import 'mixins';
+  @import 'details';
+
+{% endstylesheet %}

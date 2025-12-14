@@ -14,6 +14,17 @@
     "imageCount": 6
   },
   {
+    "id": "bank-of-dad",
+    "type": "projects",
+    "sublabel": "",
+    "label": "Bank of Dad",
+    "images": [
+      "Login Screen",
+      "Dashboard",
+      "Transaction View"
+    ]
+  },
+  {
     "id": "whodini",
     "type": "projects",
     "sublabel": "",
