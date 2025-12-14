@@ -100,8 +100,13 @@ module.exports = function(src, alt, sizes = '90vw, (min-width: 1280px) 1152px', 
   const imagePath = getImagePath(src)
 
   // Check if file exists before processing
+  // If file doesn't exist, return a placeholder picture element
   if (!fs.existsSync(imagePath)) {
-    throw new Error(`Image file not found: ${imagePath} (resolved from src: ${src})`)
+    return `
+      <picture style="background-color:#CCC;">
+        <img src="" alt="${alt}" loading="${loading}">
+      </picture>
+    `
   }
 
   // Original image in sharp
