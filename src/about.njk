@@ -1,0 +1,138 @@
+---
+layout: default.liquid
+title: About
+---
+
+<main class='grid grid--about'>
+  <div class='box box--masthead'>
+    {% picture 'about/0.jpg',
+    'About',
+    '90vw',
+    'lazy' %}
+  </div>
+  <div class='box box--text box--intro'>
+    <div class='fg'>
+      <div class='placard'>
+        <h2>Howdy</h2>
+      </div>
+    </div>
+    <div class='bg'>
+      <p>I'm Jeff<span class='red'>ery</span> Bennett &amp; I'm honored that you&rsquo;ve stopped by.</p>
+      <p>I'm a technologist living in Minnetonka &amp; Grand Marais, Minnesota with my pretty wife &amp; three genius children.</p>
+      <p>Prior to Minnesota, I did some time in San Francisco, a bit in Boston, got a design degree at the <a href='https://daap.uc.edu/'>University of Cincinnati</a> and grew up in Niles, Ohio.</p>
+      <p>I'm fond of <a href='https://www.instagram.com/p/BffHRb1HhWO/'>building</a>
+        <a href='https://www.flickr.com/photos/meandmybadself/15431186602/in/album-72157647921412539/'>stuff</a> out of <a href='https://www.flickr.com/photos/meandmybadself/albums/72157632352809396'>cardboard</a>, 80&rsquo;s pop culture, <a href='/projects/pins'>making ephemeral buttons</a> &amp; <a href='https://www.instagram.com/p/CGxcB5ZHoyG/'>homemade</a>
+        Halloween
+        costumes.</p>
+      <p>Holler at me: <a href='mailto:me@meandmybadself.com'>me@meandmybadself.com</a>
+      </p>
+    </div>
+  </div>
+  <div class='box box--text box--experience'>
+    <div class='fg'>
+      <div class='placard'>
+        <h2>Experience</h2>
+      </div>
+    </div>
+    <div class="bg">
+      <p>I'm currently a software engineer at NVIDIA, working with really smart &amp; nice people on machine learning and AI.</p>
+      <p>I&rsquo;ve been lucky enough to have the opportunity to work with amazing teams at Apple, Sundance, <Link to='/work/studio-connect'>Target</Link>, <Link to='/work/disrupt'>TechCrunch</Link> and many more.</p>
+      <p>Always in search of technology enthusiasts to collaborate & talk with.</p>
+      </p>
+      <p>
+        <a href='/_assets/resume.pdf'>Resume</a>
+      </p>
+    </div>
+  </div>
+  <div class='box box--text box--elsewhere'>
+    <div class='fg'>
+      <div class='placard'>
+        <h2>Elsewhere</h2>
+      </div>
+    </div>
+    <div class='bg'>
+      <ul>
+        <li>
+          <a href='https://instagram.com/meandmybadself'>Instagram</a>
+        </li>
+        <li>
+          <a href='https://flickr.com/meandmybadself'>Flickr</a>
+        </li>
+        <li>
+          <a href='https://github.com/meandmybadself'>Github</a>
+        </li>
+        <li>
+          <a href='https://linkedin.com/in/meandmybadself/'>LinkedIn</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% stylesheet 'scss' %}
+
+    $accent: #CC0000;
+    @import "global";
+    @import "mixins";
+
+    .grid.grid--about {
+        grid-template-rows: none;
+        grid-auto-rows: minmax(min-content, max-content);
+        .box {
+            a {
+                color: $accent;
+            }
+            &.box--masthead {
+                min-height: 300px;
+                @include med {
+                    min-height: 450px;
+                }
+                grid-area: 1/3/2/5;
+                picture, img {
+                    object-position: top center;
+                }
+            }
+
+            li {
+                margin-bottom:1.025em;
+            }
+
+            .fg {
+                pointer-events: none;
+                .placard {
+                    color: $accent;
+                }
+            }
+
+            &.box--description {
+                .fg {
+                    padding: 50px;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+
+            &.box--intro {
+                grid-area: 1/1/2/3;
+                @include placard-left;
+            }
+            &.box--experience {
+                grid-area: 2/1/3/3;
+                @include placard-right;
+                @include med {
+                    @include placard-left;
+                }
+            }
+            &.box--elsewhere {
+                grid-area: 2/3/3/5;
+                @include placard-right;
+                .fg {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+
+{% endstylesheet %}
