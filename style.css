@@ -1,0 +1,547 @@
+/* ============================================
+   Typography.com font kit
+   ============================================
+   Paste your @font-face rules from Typography.com here,
+   or use the CSS link approach below.
+
+   Kit URL: https://cloud.typography.com/6984932/6762612/css/fonts.css
+
+   Fonts used in this site:
+   - "Gotham A", "Gotham B" (Bold, weight 700) — display headings
+   - "Gotham A", "Gotham B" (Medium, weight 500) — labels, nav, UI text
+   ============================================ */
+@import url("https://cloud.typography.com/6984932/6762612/css/fonts.css");
+
+/* ============================================
+   Design Tokens
+   ============================================ */
+:root {
+  /* Typography */
+  --font-display: "Gotham A", "Gotham B", system-ui, sans-serif;
+  --font-body: "Gotham A", "Gotham B", system-ui, sans-serif;
+
+  /* Colors — light mode: white on black */
+  --color-bg: #111111;
+  --color-surface: #1a1a1a;
+  --color-border: #333333;
+  --color-text: #f0f0f0;
+  --color-muted: #999999;
+  --color-accent: #f0f0f0;
+  --color-link: #f0f0f0;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 8rem;
+
+  /* Layout */
+  --max-width: 64rem;
+  --gutter: var(--space-md);
+}
+
+/* Dark mode: black on white */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #ffffff;
+    --color-surface: #f5f5f5;
+    --color-border: #e0e0e0;
+    --color-text: #111111;
+    --color-muted: #666666;
+    --color-accent: #111111;
+    --color-link: #111111;
+  }
+}
+
+/* ============================================
+   Reset & Base
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+section {
+  padding-block: var(--space-md) var(--space-xl);
+}
+
+section + section {
+  border-top: none;
+}
+
+/* ============================================
+   Site Header
+   ============================================ */
+.site-header {
+  padding-block: var(--space-lg) 0;
+  text-align: center;
+}
+
+.site-name {
+  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: calc(var(--space-sm) * 1.77559);
+}
+
+.site-name:hover {
+  text-decoration: none;
+}
+
+.site-tagline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-top: calc(var(--space-sm) * 1.331);
+}
+
+.site-tagline a {
+  color: var(--color-text);
+}
+
+.site-tagline a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding-block: calc(var(--space-md) / 2) 0;
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.site-nav a {
+  color: var(--color-muted);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="true"] {
+  color: var(--color-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ============================================
+   Section Headings
+   ============================================ */
+.section-heading {
+  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
+  margin-bottom: var(--space-sm);
+}
+
+/* ============================================
+   About Section
+   ============================================ */
+.about-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(0%);
+}
+
+.about-content p {
+  margin-bottom: var(--space-md);
+  max-width: 40rem;
+}
+
+.about-content a {
+  text-decoration: underline;
+}
+
+.about-subsection {
+  margin-top: var(--space-lg);
+}
+
+.about-subsection h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.social-links a {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Project Grid (shared by Work, Projects, Media)
+   ============================================ */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 36rem) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48rem) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   Project Card
+   ============================================ */
+.project-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-surface);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  filter: grayscale(0%);
+}
+
+.project-card:hover img {
+  opacity: 0.7;
+}
+
+.project-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #f0f0f0;
+}
+
+.project-card-client {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.924rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  opacity: 1;
+  margin-bottom: 0;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
+
+.project-card-title {
+  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
+  line-height: 1.2;
+}
+
+.project-card:hover {
+  text-decoration: none;
+}
+
+/* ============================================
+   Media Card (external links)
+   ============================================ */
+.media-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface);
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0%);
+  transition: opacity 0.3s ease;
+}
+
+.media-card:hover img {
+  opacity: 0.7;
+}
+
+.media-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #f0f0f0;
+}
+
+.media-card-venue {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  margin-bottom: var(--space-xs);
+}
+
+.media-card-title {
+  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.media-card:hover {
+  text-decoration: none;
+}
+
+/* ============================================
+   Detail Page
+   ============================================ */
+.detail-header {
+  padding-block: var(--space-xl) var(--space-md);
+}
+
+.detail-client {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.detail-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
+  line-height: 1.1;
+}
+
+.detail-masthead {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  margin-bottom: var(--space-xl);
+  filter: grayscale(0%);
+}
+
+.detail-body {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+}
+
+.detail-body p {
+  margin-bottom: var(--space-md);
+}
+
+.detail-body a {
+  text-decoration: underline;
+}
+
+.detail-thanks {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+.detail-thanks h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.detail-thanks a {
+  text-decoration: underline;
+}
+
+/* Detail images grid */
+.detail-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  padding-block: var(--space-xl);
+}
+
+@media (min-width: 48rem) {
+  .detail-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.detail-image-item {
+  position: relative;
+}
+
+.detail-image-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: grayscale(0%);
+}
+
+.detail-image-caption {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Detail nav (prev/next) */
+.detail-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.detail-nav a:hover {
+  text-decoration: underline;
+}
+
+.detail-nav-label {
+  color: var(--color-muted);
+  margin-right: var(--space-xs);
+}
+
+.detail-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* ============================================
+   Audio Player
+   ============================================ */
+audio {
+  width: 100%;
+  margin-bottom: var(--space-lg);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-xl);
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-links a {
+  color: var(--color-muted);
+}
+
+.footer-links a:hover {
+  color: var(--color-text);
+}
+
+.footer-copyright {
+  margin-top: var(--space-md);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
