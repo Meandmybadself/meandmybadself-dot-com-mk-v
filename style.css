@@ -20,14 +20,14 @@
   --font-display: "Gotham A", "Gotham B", system-ui, sans-serif;
   --font-body: "Gotham A", "Gotham B", system-ui, sans-serif;
 
-  /* Colors — light mode: white on black */
-  --color-bg: #111111;
-  --color-surface: #1a1a1a;
-  --color-border: #333333;
-  --color-text: #f0f0f0;
-  --color-muted: #999999;
-  --color-accent: #f0f0f0;
-  --color-link: #f0f0f0;
+  /* Colors — light mode */
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-border: #e0e0e0;
+  --color-text: #111111;
+  --color-muted: #666666;
+  --color-accent: #111111;
+  --color-link: #111111;
 
   /* Spacing scale */
   --space-xs: 0.25rem;
@@ -42,16 +42,16 @@
   --gutter: var(--space-md);
 }
 
-/* Dark mode: black on white */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #ffffff;
-    --color-surface: #f5f5f5;
-    --color-border: #e0e0e0;
-    --color-text: #111111;
-    --color-muted: #666666;
-    --color-accent: #111111;
-    --color-link: #111111;
+    --color-bg: #111111;
+    --color-surface: #1a1a1a;
+    --color-border: #333333;
+    --color-text: #f0f0f0;
+    --color-muted: #999999;
+    --color-accent: #f0f0f0;
+    --color-link: #f0f0f0;
   }
 }
 
