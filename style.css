@@ -1,24 +1,10 @@
 /* ============================================
-   Typography.com font kit
-   ============================================
-   Paste your @font-face rules from Typography.com here,
-   or use the CSS link approach below.
-
-   Kit URL: https://cloud.typography.com/6984932/6762612/css/fonts.css
-
-   Fonts used in this site:
-   - "Gotham A", "Gotham B" (Bold, weight 700) — display headings
-   - "Gotham A", "Gotham B" (Medium, weight 500) — labels, nav, UI text
-   ============================================ */
-@import url("https://cloud.typography.com/6984932/6762612/css/fonts.css");
-
-/* ============================================
    Design Tokens
    ============================================ */
 :root {
   /* Typography */
-  --font-display: "Gotham A", "Gotham B", system-ui, sans-serif;
-  --font-body: "Gotham A", "Gotham B", system-ui, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* Colors — light mode */
   --color-bg: #ffffff;
@@ -123,7 +109,7 @@ section + section {
 }
 
 .site-name {
-  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
@@ -185,7 +171,7 @@ section + section {
    Section Headings
    ============================================ */
 .section-heading {
-  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
@@ -313,7 +299,7 @@ section + section {
 }
 
 .project-card-title {
-  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
@@ -367,7 +353,7 @@ section + section {
 }
 
 .media-card-title {
-  font-family: "Gotham A", "Gotham B", system-ui, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 1.1rem;
