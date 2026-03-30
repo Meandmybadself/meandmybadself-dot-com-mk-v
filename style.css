@@ -490,6 +490,67 @@ section + section {
 }
 
 /* ============================================
+   Tool List
+   ============================================ */
+.tool-list {
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-block: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 48rem) {
+  .tool-item {
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--space-lg);
+  }
+}
+
+.tool-info {
+  flex: 1;
+}
+
+.tool-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.tool-description {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  max-width: 40rem;
+}
+
+.tool-links {
+  display: flex;
+  gap: var(--space-md);
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tool-links a {
+  color: var(--color-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tool-links a:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+/* ============================================
    Audio Player
    ============================================ */
 audio {
