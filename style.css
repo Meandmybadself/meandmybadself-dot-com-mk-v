@@ -147,6 +147,7 @@ section + section {
    ============================================ */
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-lg);
   padding-block: calc(var(--space-md) / 2) 0;
