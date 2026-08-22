@@ -183,7 +183,7 @@ main > section:nth-of-type(3n + 3) .section-heading {
 
 .about-photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: top center;
   filter: grayscale(0%);
