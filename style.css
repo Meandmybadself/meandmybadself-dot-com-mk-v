@@ -287,8 +287,8 @@ main > section:nth-of-type(3n + 3) .section-heading {
 
 .project-card-client {
   font-family: var(--font-body);
-  font-weight: 900;
-  font-size: 1.1088rem;
+  font-weight: 400;
+  font-size: 0.887rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #fff;
@@ -345,7 +345,8 @@ main > section:nth-of-type(3n + 3) .section-heading {
 
 .media-card-venue {
   font-family: var(--font-body);
-  font-size: 0.84rem;
+  font-weight: 400;
+  font-size: 0.672rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.8;
