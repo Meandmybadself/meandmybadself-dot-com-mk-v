@@ -288,21 +288,22 @@ main > section:nth-of-type(3n + 3) .section-heading {
 .project-card-client {
   font-family: var(--font-body);
   font-weight: 900;
-  font-size: 0.924rem;
+  font-size: 1.1088rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #fff;
   opacity: 1;
   margin-bottom: 0;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 1);
 }
 
 .project-card-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: clamp(1.16964rem, 2.9241vw, 1.65796rem);
+  font-size: clamp(1.40357rem, 3.5089vw, 1.98955rem);
   line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 1);
 }
 
 .project-card:hover {
@@ -344,19 +345,21 @@ main > section:nth-of-type(3n + 3) .section-heading {
 
 .media-card-venue {
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.8;
   margin-bottom: var(--space-xs);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 1);
 }
 
 .media-card-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1.32rem;
   line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 1);
 }
 
 .media-card:hover {
