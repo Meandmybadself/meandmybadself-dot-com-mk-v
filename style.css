@@ -237,7 +237,7 @@ main > section:nth-of-type(3n + 3) .section-heading {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 @media (min-width: 36rem) {
