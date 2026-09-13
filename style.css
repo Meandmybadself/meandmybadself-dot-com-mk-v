@@ -145,6 +145,17 @@ section + section {
   text-decoration: underline;
 }
 
+/* Mobile: bump header type up 20% */
+@media (max-width: 47.99rem) {
+  .site-name {
+    font-size: clamp(1.40357rem, 3.5089vw, 1.98955rem);
+  }
+
+  .site-tagline {
+    font-size: clamp(0.96rem, 2.4vw, 1.26rem);
+  }
+}
+
 /* ============================================
    Section Headings
    ============================================ */
