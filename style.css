@@ -288,6 +288,19 @@ main > section:nth-of-type(3n + 3) .section-heading {
   line-height: 1.2;
 }
 
+/* Cycle title colors red → blue → yellow across cards */
+.project-card:nth-child(3n + 1) .project-card-title {
+  color: var(--color-highlight-red);
+}
+
+.project-card:nth-child(3n + 2) .project-card-title {
+  color: var(--color-highlight-blue);
+}
+
+.project-card:nth-child(3n + 3) .project-card-title {
+  color: var(--color-highlight-yellow);
+}
+
 .project-card:hover {
   text-decoration: none;
 }
