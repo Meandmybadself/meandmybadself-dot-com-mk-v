@@ -76,6 +76,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  box-sizing: border-box;
+  border: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 a {
@@ -237,7 +239,7 @@ main > section:nth-of-type(3n + 3) .section-heading {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-sm);
+  gap: calc(var(--space-sm) / 2);
 }
 
 @media (min-width: 36rem) {
