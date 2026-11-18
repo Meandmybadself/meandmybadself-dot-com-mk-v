@@ -280,16 +280,6 @@ main > section:nth-of-type(3n + 3) .section-heading {
   color: var(--color-text);
 }
 
-.project-card-client {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.887rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-muted);
-  margin-bottom: 0;
-}
-
 .project-card-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
