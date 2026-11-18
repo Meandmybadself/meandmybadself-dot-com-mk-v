@@ -19,6 +19,7 @@
   --color-highlight-red: #ff5747;
   --color-highlight-blue: #46b4e6;
   --color-highlight-yellow: #f4d11e;
+  --color-highlight-green: #4cd078;
 
   /* Spacing scale */
   --space-xs: 0.25rem;
@@ -288,17 +289,22 @@ main > section:nth-of-type(3n + 3) .section-heading {
   line-height: 1.2;
 }
 
-/* Cycle title colors red → blue → yellow across cards */
-.project-card:nth-child(3n + 1) .project-card-title {
+/* Cycle title colors red → blue → yellow → green across cards.
+   Four colors on a 3-column grid keeps columns from matching. */
+.project-card:nth-child(4n + 1) .project-card-title {
   color: var(--color-highlight-red);
 }
 
-.project-card:nth-child(3n + 2) .project-card-title {
+.project-card:nth-child(4n + 2) .project-card-title {
   color: var(--color-highlight-blue);
 }
 
-.project-card:nth-child(3n + 3) .project-card-title {
+.project-card:nth-child(4n + 3) .project-card-title {
   color: var(--color-highlight-yellow);
+}
+
+.project-card:nth-child(4n + 4) .project-card-title {
+  color: var(--color-highlight-green);
 }
 
 .project-card:hover {
