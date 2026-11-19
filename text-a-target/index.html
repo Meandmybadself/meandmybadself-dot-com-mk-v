@@ -9,12 +9,12 @@
   <meta property="og:url" content="https://meandmybadself.com/text-a-target/">
   <meta property="og:title" content="Target: Text-a-Target">
   <meta property="og:description" content="Target: Text-a-Target by Jeffery Bennett">
-  <meta property="og:image" content="https://meandmybadself.com/images/masthead-text-a-target.jpeg">
+  <meta property="og:image" content="https://meandmybadself.com/images/masthead-text-a-target.jpeg?v=resized">
   <meta property="og:site_name" content="Me &amp; My Bad Self">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Target: Text-a-Target">
   <meta name="twitter:description" content="Target: Text-a-Target by Jeffery Bennett">
-  <meta name="twitter:image" content="https://meandmybadself.com/images/masthead-text-a-target.jpeg">
+  <meta name="twitter:image" content="https://meandmybadself.com/images/masthead-text-a-target.jpeg?v=resized">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="../style.css?v=green">
   <script src="https://webrung.com/webrung.js"></script>
@@ -32,7 +32,7 @@
       <h1 class="detail-title">Text-a-Target</h1>
     </div>
 
-    <img class="detail-masthead" src="../images/masthead-text-a-target.jpeg" alt="Text-a-Target">
+    <img class="detail-masthead" src="../images/masthead-text-a-target.jpeg?v=resized" alt="Text-a-Target">
 
     <div class="detail-body">
 <p>To assist guests in finding items in stores being remodeled, Target pulled out all the stops.</p> <p>One initiative involved standing up an SMS-based store search, which allowed users without the Target application to find items in the store.</p> <p>Inventory searches would query the Target API for a product in a store and get back an aisle / adjacent location.</p> <p>We then took that aisle &amp; recursively searched the store's map (conveniently <a href="https://api.target.com/store_maps/v1/external/svg_images?location_id=1356&amp;floor_id=1&amp;key=8df66ea1e1fc070a6ea99e942431c9cd67a80f02">served as an SVG</a>) to determine where the aisle was located in the store (e.g., back-left).</p> <p>The service ran for 8 months in 47 stores and sent/received over 500,000 messages.</p> <p>Under the hood, user messages were first parsed with <a href="http://naturalnode.github.io/natural/bayesian_classifier.html">Natural</a> to determine intent, and then entities were extracted using <a href="https://spacy.io/">spaCy</a>.</p>
@@ -44,11 +44,11 @@
     </div>
     <div class="detail-images">
       <div class="detail-image-item">
-        <img src="../images/detail-text-a-target-convo.jpeg" alt="In-store CTA" loading="lazy">
+        <img src="../images/detail-text-a-target-convo.jpeg?v=resized" alt="In-store CTA" loading="lazy">
         <span class="detail-image-caption">In-store CTA</span>
       </div>
       <div class="detail-image-item">
-        <img src="../images/detail-text-a-target-cta.jpeg" alt="Sample convo" loading="lazy">
+        <img src="../images/detail-text-a-target-cta.jpeg?v=resized" alt="Sample convo" loading="lazy">
         <span class="detail-image-caption">Sample convo</span>
       </div>
     </div>
